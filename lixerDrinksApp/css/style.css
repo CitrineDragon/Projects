@@ -1,0 +1,265 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primaryLight: #c696e6;
+  --primaryDark: #5a00ff;
+  --accent: #e6d1ac;
+  --complementary: #7ee6ab;
+  --darker: #111;
+  --lighter: #ccc;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background: rgb(90, 0, 255);
+  background: linear-gradient(
+    135deg,
+    rgba(198, 150, 230, 1) 0%,
+    rgba(90, 0, 255, 1) 100%
+  );
+  min-height: 100vh;
+  font-size: 2rem;
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+input {
+  background-color: var(--darker);
+  color: var(--accent);
+  font-size: 1.6rem;
+  height: 4rem;
+  width: 20rem;
+  border: 3px solid var(--primaryLight);
+  border-radius: 5px;
+  text-align: center;
+}
+
+input::placeholder {
+  color: var(--accent);
+}
+
+input:focus {
+  border: 3px solid var(--complementary);
+}
+
+.btn {
+  background-color: var(--darker);
+  color: var(--accent);
+  font-size: 1.6rem;
+  height: 4rem;
+  width: 16rem;
+  border: 3px solid var(--primaryLight);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  color: var(--complementary);
+  border: 3px solid var(--complementary);
+}
+
+.btn2 {
+  background-color: var(--darker);
+  color: var(--accent);
+  font-size: 1.6rem;
+  height: 4rem;
+  width: 10rem;
+  border: 3px solid var(--primaryLight);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn2:hover {
+  color: var(--complementary);
+  border: 3px solid var(--complementary);
+}
+
+.btn3 {
+  background-color: var(--accent);
+  color: var(--darker);
+  font-size: 1.6rem;
+  height: 4rem;
+  width: 16rem;
+  border: 3px solid var(--primaryDark);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn3:hover {
+  background-color: var(--complementary);
+  color: var(--darker);
+  border: 3px solid var(--primaryDark);
+}
+
+.hidden {
+  display: none;
+}
+
+.fa-solid {
+  font-size: 2.5rem;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner > img {
+  width: 30rem;
+  margin: -4rem 0;
+}
+
+.fancyText {
+  color: var(--complementary);
+  font-family: 'Shadows Into Light', cursive;
+  margin-bottom: 5rem;
+}
+
+.searchSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.drinkNameSearch {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.nameSearchButton {
+  margin-left: 1rem;
+}
+
+.randomDrinkSearch {
+  margin-top: 1.5rem;
+}
+
+.text {
+  color: var(--darker);
+}
+
+.countText,
+.resultText {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 3rem;
+  color: var(--darker);
+}
+
+.ingredientNameSearch {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.drinkContainer {
+  text-align: center;
+}
+
+.drinkMain {
+  display: flex;
+  flex-direction: row;
+  padding-top: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.drinkIMG {
+  height: 25rem;
+  width: 25rem;
+  border: 3px solid var(--accent);
+  border-radius: 100%;
+  object-fit: cover;
+  object-position: center center;
+  margin-bottom: 1rem;
+}
+
+.fa-solid {
+  color: var(--complementary);
+}
+
+.drinkTitle {
+  font-size: 4rem;
+  font-family: 'Shadows Into Light', cursive;
+  color: var(--complementary);
+  padding: 2rem 0;
+}
+
+.drinkInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ingredientInfo {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  max-width: 40rem;
+  padding: 1rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.ingredientInfoList {
+  background: var(--accent);
+  color: var(--darker);
+  min-height: 10rem;
+  width: 90vw;
+  max-width: 40rem;
+  border: 3px solid var(--primaryLight);
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.instructionInfo {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  max-width: 40rem;
+  padding: 1rem 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.instructionInfoList {
+  background: var(--accent);
+  color: var(--darker);
+  min-height: 20rem;
+  width: 90vw;
+  max-width: 40rem;
+  border: 3px solid var(--primaryLight);
+  border-radius: 5px;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

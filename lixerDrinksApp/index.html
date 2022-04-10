@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Your description goes here" />
+    <meta name="keywords" content="one, two, three" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Lixer | Lost in the sauce!</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <section class="banner">
+      <img src="https://github.com/CitrineDragon/Images/blob/master/coollogo_com-270201527.png?raw=true" alt="Lixer">
+      <p class="fancyText">LOST IN THE SAUCE...</p>
+    </section>
+
+    <section class="searchSection">
+      <section class="drinkNameSearch">
+        <!-- <p class="text">What do you want to make?</p> -->
+        <input
+          type="text"
+          class="nameSearchField"
+          placeholder="Enter Drink Name..."
+        />
+        <button class="nameSearchButton btn2">Search</button>
+      </section>
+        <button class="randomDrinkSearch btn3">Feeling Lucky?</button>
+      </section>
+    </section>
+
+    <section class="drinkContainer">
+      <section class="drinkMain">
+        <i class="fa-solid fa-angles-left"></i>
+        <img
+          src="https://github.com/CitrineDragon/Images/blob/master/drinkPlaceholder.jpg?raw=true"
+          alt="Green Drink"
+          class="drinkIMG"
+        />
+        <i class="fa-solid fa-angles-right"></i>
+      </section>
+      <p class="text">
+        <span class="countText countRText">1</span> / <span class="resultText resultRText">1</span>
+      </p>
+    </section>
+    <section class="drinkInfo">
+      <h2 class="drinkTitle">Leprechaun Sweat</h2>
+      <section class="ingredientInfo">
+        <button class="ingredientInfoBtn btn">View Ingredients</button>
+        <section class="ingredientInfoList hidden">
+          Search for a drink to see the ingredients.
+        </section>
+      </section>
+      <section class="instructionInfo">
+        <button class="instructionInfoBtn btn">View Instructions</button>
+        <section class="instructionInfoList hidden">
+          Search for a drink to see the instructions.
+        </section>
+      </section>
+    </section>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
