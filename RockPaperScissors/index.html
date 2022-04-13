@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="This is where your description goes" />
+    <meta name="keywords" content="one, two, three" />
+
+    <title>Rock, Paper, Scissors!</title>
+
+    <!-- external CSS link -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <h1>Let's Play Rock-Paper-Scissors!</h1>
+    <p class="pText">
+      Instructions: Choose Rock, Paper or Scissors and the computer will make
+      their choice. Rock beats Scissors, Paper beats Rock & Scissors beats
+      Paper. Player with the higher score at the end of ten rounds wins.
+      Pressing reset will start the game over. Have Fun!
+    </p>
+    <li>User's Choice: <span class="userChoice updated"></span></li>
+    <li>Computer's Choice: <span class="comChoice updated"></span></li>
+    <section class="btnWrapper">
+      <button class="rock btn">Rock</button>
+      <button class="paper btn">Paper</button>
+      <button class="scissors btn">Scissors</button>
+    </section>
+    <li>User Points: <span class="userPoints updated"></span></li>
+    <li>Computer Points: <span class="comPoints updated"></span></li>
+    <li>Rounds Remaining: <span class="roundsRemain updated"></span></li>
+    <button class="startOver btnAlt">Reset</button>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

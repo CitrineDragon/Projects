@@ -1,0 +1,206 @@
+/* Box Model Hack */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-grey: #333;
+  --darker-grey: #222;
+  --medium-grey: #999;
+  --light-grey: #cbcad0;
+  --brown: #413b3f;
+  --accent: rgba(228, 208, 10, 1);
+  --rainbow: linear-gradient(
+    124deg,
+    #ff2400,
+    #e81d1d,
+    #e8b71d,
+    #e3e81d,
+    #1de840,
+    #1ddde8,
+    #2b1de8,
+    #dd00f3,
+    #dd00f3
+  );
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+body {
+  display: flex;
+  flex-direction: column;
+  background: rgba(212, 172, 107, 0.6);
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  display: block;
+  background: salmon;
+  height: 28px;
+  line-height: 28px;
+  font-size: 1.5rem;
+  width: 236px;
+  padding: 0 0.5rem;
+}
+
+@-webkit-keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+@-moz-keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+@-o-keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+@keyframes rainbow {
+  0% {
+    background-position: 0% 82%;
+  }
+  50% {
+    background-position: 100% 19%;
+  }
+  100% {
+    background-position: 0% 82%;
+  }
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.accentText {
+  position: relative;
+  color: var(--accent);
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  top: 26px;
+  left: 95px;
+  background-image: var(--rainbow);
+  background-clip: text;
+  background-size: 1000px 1000px;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  -webkit-animation: rainbow 5s ease infinite;
+  -z-animation: rainbow 5s ease infinite;
+  -o-animation: rainbow 5s ease infinite;
+  animation: rainbow 5s ease infinite;
+}
+.topContainer {
+  display: flex;
+  background: var(--brown);
+  width: 321px;
+  border: 1px solid black;
+  border-radius: 10px 10px 0 0;
+  border-bottom: none;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 8px 8px 8px 0 black;
+}
+
+.display {
+  text-align: right;
+  height: 100%;
+  border: 2px solid black;
+  overflow-x: hidden;
+}
+
+.bottomContainer {
+  display: flex;
+  background: var(--light-grey);
+  padding: 2rem;
+  width: 321px;
+  border: 1px solid black;
+  border-top: 3px solid black;
+  border-radius: 0 0 10px 10px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 8px 8px 8px 0 black;
+}
+
+.keypad {
+  display: flex;
+  gap: 5px;
+  flex-flow: row wrap;
+  width: 285px;
+  justify-content: center;
+  align-items: center;
+}
+
+.keypad li button {
+  font-weight: 700;
+}
+
+li {
+  background: var(--darker-grey);
+  width: 60px;
+  height: 60px;
+  list-style-type: none;
+}
+
+.btn {
+  width: 60px;
+  height: 60px;
+  border: 2px solid black;
+  background-image: var(--rainbow);
+  background-clip: text;
+  background-size: 1000px 1000px;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  color: transparent;
+  -webkit-animation: rainbow 5s ease infinite;
+  -z-animation: rainbow 5s ease infinite;
+  -o-animation: rainbow 5s ease infinite;
+  animation: rainbow 5s ease infinite;
+}
+
+.btn:hover {
+  border: 1px solid var(--light-grey);
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

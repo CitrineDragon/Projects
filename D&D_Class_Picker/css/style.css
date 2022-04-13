@@ -1,0 +1,127 @@
+/* Box Model Hack */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --red: #bb050e;
+  --dark: #222;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  display: flex;
+  flex-direction: column;
+  color: black;
+  height: 100vh;
+  background: url("https://github.com/CitrineDragon/Images/blob/master/DND_Parchment_2.jpg?raw=true");
+  background-size: cover;
+  font-family: "Merienda One", cursive;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.btn {
+  background: var(--dark);
+  color: var(--red);
+  border: 1px solid var(--red);
+  padding: 1rem 3rem;
+  box-shadow: 8px 8px 5px 0 var(--dark);
+}
+
+.btn:hover {
+  position: relative;
+  background: var(--red);
+  color: var(--dark);
+  border: 1px solid var(--dark);
+  transform: scale(1.1);
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+main {
+  display: flex;
+  min-height: 10vh;
+  height: auto;
+  width: 100%;
+  max-width: 970px;
+  justify-content: center;
+  align-items: center;
+}
+
+main img {
+  height: 100%;
+  width: 100%;
+}
+
+h1 {
+  display: flex;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.races {
+  margin: 1rem 0 2rem 0;
+  padding: 0 1rem;
+}
+
+.races ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.hero {
+  height: 320px;
+  padding: 1rem 1rem;
+}
+
+.hero img {
+  width: 100%;
+  max-width: 470px;
+  aspect-ratio: 1.5 / 1;
+  object-fit: cover;
+  object-position: center center;
+  border: 10px solid white;
+  box-shadow: 8px 8px 5px 0 var(--dark);
+}
+
+.test {
+  color: pink;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

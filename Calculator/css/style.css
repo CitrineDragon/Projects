@@ -1,0 +1,125 @@
+/* Box Model Hack */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --dark-grey: #333;
+  --medium-grey: #999;
+  --accent: rgba(228, 208, 10, 1);
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+body {
+  display: flex;
+  flex-direction: column;
+  background: #111;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+span {
+  display: block;
+  background: salmon;
+  height: 28px;
+  line-height: 28px;
+  font-size: 1.5rem;
+  width: 236px;
+  padding: 0 0.5rem;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.accentText {
+  position: relative;
+  color: var(--accent);
+  font-family: "Dancing Script", cursive;
+  top: 26px;
+  left: 95px;
+}
+.topContainer {
+  display: flex;
+  background: var(--dark-grey);
+  width: 306px;
+  border: 1px solid black;
+  border-radius: 10px 10px 0 0;
+  border-bottom: none;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 8px 8px 5px 0 black;
+}
+
+.display {
+  text-align: right;
+  height: 100%;
+  border: 2px solid black;
+  overflow-x: hidden;
+}
+
+.bottomContainer {
+  display: flex;
+  background: var(--dark-grey);
+  padding: 2rem;
+  width: 306px;
+  border: 1px solid black;
+  border-top: 3px solid black;
+  border-radius: 0 0 10px 10px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 8px 8px 5px 0 black;
+}
+
+li {
+  background: var(--medium-grey);
+  width: 60px;
+  height: 60px;
+  list-style-type: none;
+  padding: 5px;
+}
+
+.btn {
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
+
+.btn:hover {
+  background: rgba(230, 227, 227, 1);
+}
+
+.keypad {
+  display: flex;
+  flex-flow: row wrap;
+  width: 270px;
+  justify-content: center;
+  align-items: center;
+}
+
+.keypad li button {
+  font-weight: 700;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

@@ -1,0 +1,92 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+body {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../img/markus-winkler-aYPtEknQmXE-unsplash.jpg);
+  display: flex;
+  color: white;
+  flex-flow: column nowrap;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+h1 {
+  color: greenyellow;
+  font-size: 3rem;
+  text-shadow: 2px 2px 2px orangered;
+  padding: 1rem;
+}
+
+p {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  padding-bottom: 1rem;
+}
+
+.pText {
+  font-style: italic;
+  padding-bottom: 3rem;
+}
+
+li {
+  list-style: none;
+  padding-bottom: 1rem;
+}
+
+.btnWrapper {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 1rem;
+}
+
+.btn {
+  background: #111;
+  color: greenyellow;
+  height: 35px;
+  width: 70px;
+  border: 1px solid greenyellow;
+  border-radius: 3px;
+}
+
+.btn:hover {
+  background: #222;
+  border: 1px solid greenyellow;
+  transform: scale(1.2);
+}
+
+.btnAlt {
+  background: orangered;
+  color: white;
+  height: 35px;
+  width: 70px;
+  border: 1px solid red;
+  border-radius: 3px;
+}
+
+.btnAlt:hover {
+  background: red;
+  border: 1px solid orangered;
+  transform: scale(1.2);
+}
+
+.updated {
+  font-size: 1.4rem;
+  color: greenyellow;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

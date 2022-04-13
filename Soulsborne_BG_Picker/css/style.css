@@ -1,0 +1,125 @@
+/* Box Model Hack */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --monitor: #111;
+  --stand: rgb(5, 5, 5);
+  --desk: #3f2c25;
+  --wall: #b0a58f;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+li {
+  display: flex;
+  color: white;
+  font-size: 0.5rem;
+  background: white;
+  width: 30px;
+  aspect-ratio: 1 / 1.4;
+  list-style-type: none;
+}
+
+span {
+  color: white;
+  font-size: 0.5rem;
+  margin-top: -20px;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.main {
+  position: relative;
+  display: flex;
+  background: var(--wall);
+  height: 900px;
+  min-width: 900px;
+  justify-content: center;
+  align-items: center;
+}
+
+.monitorWrapper {
+  display: flex;
+  background: var(--monitor);
+  width: 1219px;
+  min-width: 1000px;
+  aspect-ratio: 16 / 9;
+  padding: 32px;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.monitor {
+  background: url("https://github.com/CitrineDragon/Images/blob/master/Windows_BG.jpg?raw=true");
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-size: cover;
+  background-position: center center;
+  z-index: 2;
+}
+
+.programs ul {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.monitorStand {
+  position: absolute;
+  background: var(--stand);
+  height: 300px;
+  width: 160px;
+  top: 650px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.desk {
+  display: flex;
+  background: var(--desk);
+  height: calc(100vh - 900px);
+  z-index: 3;
+  perspective: 700px;
+  justify-content: center;
+  align-items: center;
+}
+
+.standBottom {
+  position: absolute;
+  display: flex;
+  background: var(--stand);
+  width: 600px;
+  height: 200px;
+  top: -30px;
+  border-radius: 5px;
+  transform: rotateX(50deg);
+  justify-content: center;
+  align-items: center;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

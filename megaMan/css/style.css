@@ -1,0 +1,193 @@
+/* Box Model Hack */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+.hidden {
+  display: none;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+.main {
+  display: flex;
+  flex-direction: column;
+  background: url("https://github.com/CitrineDragon/Images/blob/master/megaManBGRev.jpg?raw=true");
+  height: 100vh;
+  background-size: cover;
+  background-position: center left;
+  background-repeat: no-repeat;
+}
+
+.cards {
+  background: black;
+  position: absolute;
+  display: flex;
+  height: 100%;
+  width: 120px;
+  flex-flow: column nowrap;
+  gap: 10px;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.boss {
+  display: flex;
+  flex-direction: column;
+  width: 90px;
+  border: 5px solid transparent;
+  justify-content: center;
+  align-items: center;
+}
+
+.bossImg {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  object-fit: scale-down;
+  object-position: top center;
+  border: 5px solid transparent;
+}
+
+.boss:hover {
+  background: black;
+  border: 5px dashed #aaa;
+  border-radius: 5px;
+}
+
+.bossName {
+  background: black;
+  display: flex;
+  color: white;
+  font-family: "Press Start 2P", cursive;
+  font-size: 0.6rem;
+  height: 30px;
+  border-radius: 10px;
+  padding: 5px 3px 3px 3px;
+  justify-content: center;
+  align-items: center;
+}
+
+.bossSide {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  left: -200px;
+  transform: translateY(-50%);
+  height: auto;
+  width: 200px;
+  flex-direction: column;
+  margin: auto 0;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.bossSide img {
+  height: auto;
+  width: 200px;
+}
+
+@keyframes bossDataAppear {
+  0% {
+    transform: translateX(0px);
+  }
+  25% {
+    transform: translateX(50px);
+  }
+  50% {
+    transform: translateX(100px);
+  }
+  75% {
+    transform: translateX(150px);
+  }
+  100% {
+    transform: translateX(200px);
+  }
+}
+
+.bossSideAppear {
+  animation-name: bossDataAppear;
+  animation-duration: 0.33s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.bossMain {
+  position: absolute;
+  display: flex;
+  top: 50%;
+  left: 55.5%;
+  transform: translate(-50%, -50%);
+  height: 400px;
+  width: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.bossMain img {
+  height: 400px;
+  width: auto;
+  transform: scale(1);
+}
+
+@keyframes bossAppear {
+  0% {
+    transform: scale(0);
+  }
+  25% {
+    transform: scale(0.25);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+  75% {
+    transform: scale(0.75);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.bossMainAppear {
+  animation-name: bossAppear;
+  animation-duration: 0.33s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+.megaman {
+  position: absolute;
+  transform: scaleX(-1);
+  height: 150px;
+  width: 150px;
+  bottom: 0;
+  left: 0;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

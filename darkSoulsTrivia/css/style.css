@@ -1,0 +1,96 @@
+/* Box Model Hack */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: '.';
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+.hidden {
+  display: none;
+}
+/******************************************
+/* BASE STYLES
+/*******************************************/
+body {
+  display: flex;
+  background-color: black;
+  background-size: cover;
+  background-position: center center;
+  font-family: 'Cinzel', serif;
+  color: white;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  width: 90%;
+  font-size: 3rem;
+  margin: 0 auto 1rem auto;
+  text-decoration: underline;
+  text-decoration-color: black;
+  text-decoration-thickness: 3px;
+  text-align: center;
+}
+h3 {
+  width: 50%;
+  font-size: 2.5rem;
+  margin: 1rem auto 0 auto;
+  text-align: center;
+}
+p {
+  width: 50%;
+  line-height: 1.6;
+  margin: 1rem auto 2rem auto;
+  text-align: center;
+}
+
+button {
+  display: flex;
+  background: lightgray;
+  color: black;
+  height: 50px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid black;
+  gap: 10px;
+  margin-bottom: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover {
+  background: rgb(190, 190, 190);
+  transform: scale(1.1);
+  text-decoration: underline;
+}
+
+li {
+  list-style-type: none;
+}
+
+.lose {
+  display: hidden;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

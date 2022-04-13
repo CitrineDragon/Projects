@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="This is where your description goes" />
+    <meta name="keywords" content="one, two, three" />
+
+    <title>Optimum Mobile Savings Calculator</title>
+
+    <!-- external CSS link -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <!-- Main Section -->
+    <section class="hero">
+      <h1>Optimum Mobile Calculator</h1>
+      <p class="mobileLink">
+        All of the current pricing and promotions can be found at
+        <a href="https://www.optimum.com/mobile/plan/savings-calculator "
+          >Optimum Mobile</a
+        >.
+      </p>
+    </section>
+
+    <!-- Current Bill -->
+    <section class="currentBill sectionWrap">
+      <h2>Current Lines</h2>
+      <form action="">
+        <!-- First Line -->
+        <section class="sectionWrap">
+          <h3>Line #1</h3>
+          <!-- Line Cost -->
+          <section class="userInput">
+            <label for="lineOneCost"
+              >How much are they paying each month?</label
+            >
+            <input
+              class="monthlyCostOne"
+              type="text"
+              name="lineOneCost"
+              placeholder="Enter the amount..."
+            />
+          </section>
+          <!-- Paid Off? -->
+          <section>
+            <button class="btn paidOffOne paid" type="button">Paid Off?</button>
+          </section>
+
+          <!-- Leasing Cost -->
+          <section class="oneLeasing hidden">
+            <section class="userInput">
+              <label for="lineOneLeasingCost"
+                >What is the leasing cost each month?</label
+              >
+              <input
+                class="monthlyLeaseOne"
+                type="text"
+                name="lineOneLeasingCost"
+                placeholder="Enter the amount..."
+              />
+            </section>
+            <!-- Leasing Months -->
+            <section class="userInput">
+              <label for="lineOneLeasingMonths"
+                >How many months left in the lease?</label
+              >
+              <input
+                class="leaseMonthsOne"
+                type="text"
+                name="lineOneLeasingMonths"
+                placeholder="Enter the amount..."
+              />
+            </section>
+          </section>
+
+          <!-- Add Line -->
+          <section>
+            <button class="btn addLineOne" type="button">Add Line</button>
+          </section>
+        </section>
+
+        <!-- Second Line -->
+        <section class="twoCurrent hidden sectionWrap">
+          <h3>Line #2</h3>
+          <!-- Line Cost -->
+          <section class="userInput">
+            <label for="lineTwoCost"
+              >How much are they paying each month?</label
+            >
+            <input
+              class="monthlyCostTwo"
+              type="text"
+              name="lineTwoCost"
+              placeholder="Enter the amount..."
+            />
+          </section>
+          <!-- Paid Off? -->
+          <section>
+            <button class="btn paidOffTwo paid" type="button">Paid Off?</button>
+          </section>
+
+          <!-- Leasing Cost -->
+          <section class="twoLeasing hidden">
+            <section class="userInput">
+              <label for="lineTwoLeasingCost"
+                >What is the leasing cost each month?</label
+              >
+              <input
+                class="monthlyLeaseTwo"
+                type="text"
+                name="lineTwoLeasingCost"
+                placeholder="Enter the amount..."
+              />
+            </section>
+            <!-- Leasing Months -->
+            <section class="userInput">
+              <label for="lineTwoLeasingMonths"
+                >How many months left in the lease?</label
+              >
+              <input
+                class="leaseMonthsTwo"
+                type="text"
+                name="lineTwoLeasingMonths"
+                placeholder="Enter the amount..."
+              />
+            </section>
+          </section>
+
+          <!-- Add Line -->
+          <section>
+            <button class="btn addLineTwo" type="button">Add Line</button>
+          </section>
+        </section>
+
+        <!-- Third Line -->
+        <section class="threeCurrent hidden sectionWrap">
+          <h3>Line #3</h3>
+          <!-- Line Cost -->
+          <section class="userInput">
+            <label for="lineThreeCost"
+              >How much are they paying each month?</label
+            >
+            <input
+              class="monthlyCostThree"
+              type="text"
+              name="lineThreeCost"
+              placeholder="Enter the amount..."
+            />
+          </section>
+
+          <!-- Paid Off? -->
+          <section>
+            <button class="btn paidOffThree paid" type="button">
+              Paid Off?
+            </button>
+          </section>
+
+          <!-- Leasing Cost -->
+          <section class="threeLeasing hidden">
+            <section class="userInput">
+              <label for="lineThreeLeasingCost"
+                >What is the leasing cost each month?</label
+              >
+              <input
+                class="monthlyLeaseThree"
+                type="text"
+                name="lineThreeLeasingCost"
+                placeholder="Enter the amount..."
+              />
+            </section>
+            <!-- Leasing Months -->
+            <section class="userInput">
+              <label for="lineThreeLeasingMonths"
+                >How many months left in the lease?</label
+              >
+              <input
+                class="leaseMonthsThree"
+                type="text"
+                name="lineThreeLeasingMonths"
+                placeholder="Enter the amount..."
+              />
+            </section>
+          </section>
+
+          <!-- Add Line -->
+          <section>
+            <button class="btn addLineThree" type="button">Add Line</button>
+          </section>
+        </section>
+
+        <!-- Fourth Line -->
+        <section class="fourCurrent hidden sectionWrap">
+          <h3>Line #4</h3>
+          <!-- Line Cost -->
+          <section class="userInput">
+            <label for="lineFourCost"
+              >How much are they paying each month?</label
+            >
+            <input
+              class="monthlyCostFour"
+              type="text"
+              name="lineFourCost"
+              placeholder="Enter the amount..."
+            />
+          </section>
+          <!-- Paid Off? -->
+          <section>
+            <button class="btn paidOffFour paid" type="button">
+              Paid Off?
+            </button>
+          </section>
+
+          <!-- Leasing Cost -->
+          <section class="fourLeasing hidden">
+            <section class="userInput">
+              <label for="lineFourLeasingCost"
+                >What is the leasing cost each month?</label
+              >
+              <input
+                class="monthlyLeaseFour"
+                type="text"
+                name="lineFourLeasingCost"
+                placeholder="Enter the amount..."
+              />
+            </section>
+            <!-- Leasing Months -->
+            <section class="userInput">
+              <label for="lineFourLeasingMonths"
+                >How many months left in the lease?</label
+              >
+              <input
+                class="leaseMonthsFour"
+                type="text"
+                name="lineFourLeasingMonths"
+                placeholder="Enter the amount..."
+              />
+            </section>
+          </section>
+
+          <!-- Add Line -->
+          <section>
+            <button class="btn addLineFour" type="button">Add Line</button>
+          </section>
+        </section>
+
+        <!-- Fifth Line -->
+        <section class="fiveCurrent hidden sectionWrap">
+          <h3>Line #5</h3>
+          <!-- Line Cost -->
+          <section class="userInput">
+            <label for="lineFiveCost"
+              >How much are they paying each month?</label
+            >
+            <input
+              class="monthlyCostFive"
+              type="text"
+              name="lineFiveCost"
+              placeholder="Enter the amount..."
+            />
+          </section>
+          <!-- Paid Off? -->
+          <section>
+            <button class="btn paidOffFive paid" type="button">
+              Paid Off?
+            </button>
+          </section>
+          <!-- Leasing Cost -->
+          <section class="fiveLeasing hidden">
+            <section class="userInput">
+              <label for="lineFiveLeasingCost"
+                >What is the leasing cost each month?</label
+              >
+              <input
+                class="monthlyLeaseFive"
+                type="text"
+                name="lineFiveLeasingCost"
+                placeholder="Enter the amount..."
+              />
+            </section>
+            <!-- Leasing Months -->
+            <section class="userInput">
+              <label for="lineFiveLeasingMonths"
+                >How many months left in the lease?</label
+              >
+              <input
+                class="leaseMonthsFive"
+                type="text"
+                name="lineFiveLeasingMonths"
+                placeholder="Enter the amount..."
+              />
+            </section>
+          </section>
+        </section>
+      </form>
+    </section>
+
+    <!-- New Bill -->
+    <section class="newBill sectionWrap">
+      <h2>New Lines</h2>
+      <form action="">
+        <section class="NewBillWrapper">
+          <!-- First Line -->
+          <section class="sectionWrap">
+            <h3>Line #1</h3>
+            <!-- Line Cost -->
+            <section class="userInput">
+              <label for="newLineOneCost"
+                >How much will they be paying each month?</label
+              >
+              <input
+                class="newCostOne"
+                type="text"
+                name="newLineOneCost"
+                placeholder="Enter the amount..."
+              />
+            </section>
+            <!-- Add Line -->
+            <section>
+              <button class="btn addNewLineOne" type="button">Add Line</button>
+            </section>
+          </section>
+
+          <!-- Second Line -->
+          <section class="newLineTwo hidden sectionWrap">
+            <h3>Line #2</h3>
+            <!-- Line Cost -->
+            <section class="userInput">
+              <label for="newLineTwoCost"
+                >How much will they be paying each month?</label
+              >
+              <input
+                class="newCostTwo"
+                type="text"
+                name="newLineTwoCost"
+                placeholder="Enter the amount..."
+              />
+            </section>
+            <!-- Add Line -->
+            <section>
+              <button class="btn addNewLineTwo" type="button">Add Line</button>
+            </section>
+          </section>
+
+          <!-- Third Line -->
+          <section class="newLineThree hidden sectionWrap">
+            <h3>Line #3</h3>
+            <!-- Line Cost -->
+            <section class="userInput">
+              <label for="newLineThreeCost"
+                >How much will they be paying each month?</label
+              >
+              <input
+                class="newCostThree"
+                type="text"
+                name="newLineThreeCost"
+                placeholder="Enter the amount..."
+              />
+            </section>
+            <!-- Add Line -->
+            <section>
+              <button class="btn addNewLineThree" type="button">
+                Add Line
+              </button>
+            </section>
+          </section>
+
+          <!-- Fourth Line -->
+          <section class="newLineFour hidden sectionWrap">
+            <h3>Line #4</h3>
+            <!-- Line Cost -->
+            <section class="userInput">
+              <label for="newLineFourCost"
+                >How much will they be paying each month?</label
+              >
+              <input
+                class="newCostFour"
+                type="text"
+                name="newLineFourCost"
+                placeholder="Enter the amount..."
+              />
+            </section>
+            <!-- Add Line -->
+            <section>
+              <button class="btn addNewLineFour" type="button">Add Line</button>
+            </section>
+          </section>
+
+          <!-- Fifth Line -->
+          <section class="newLineFive hidden sectionWrap">
+            <h3>Line #5</h3>
+            <!-- Line Cost -->
+            <section class="userInput">
+              <label for="newLineFiveCost"
+                >How much will they be paying each month?</label
+              >
+              <input
+                class="newCostFive"
+                type="text"
+                name="newLineFiveCost"
+                placeholder="Enter the amount..."
+              />
+            </section>
+          </section>
+        </section>
+      </form>
+    </section>
+
+    <!-- Savings -->
+    <section class="savings sectionWrap">
+      <h2>Savings</h2>
+      <section class="sectionWrap">
+        <li>
+          Total Monthly Savings: <span class="totalMonthlySavings"></span>
+        </li>
+        <li>Pay Off Amount: <span class="totalPayOff"></span></li>
+        <li>Activation Cost: <span class="activationCost"></span></li>
+        <li>
+          Months To Start Saving Money: <span class="payOffMonths"></span>
+        </li>
+        <li>
+          Savings For Switching, First Twelve Months:
+          <span class="totalYearlySavings"></span>
+        </li>
+        <li>
+          Savings For Switching, After Twelve Months:
+          <span class="totalNextYearSavings"></span>
+        </li>
+      </section>
+    </section>
+    <section class="userInput btns sectionWrap">
+      <button class="btn currentCalc" type="button">Calculate</button>
+      <button class="btn reset" type="button">Reset</button>
+    </section>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

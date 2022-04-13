@@ -1,0 +1,166 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #111;
+  --secondary: #8bc2f5;
+  --accent: #8addaa;
+  --bg: black;
+  --text: white;
+}
+
+.hidden {
+  display: none;
+}
+
+h1 {
+  color: var(--secondary);
+}
+
+h2 {
+  color: var(--secondary);
+  font-style: italic;
+  margin: 0.5rem 0;
+}
+
+h3 {
+  color: var(--accent);
+}
+
+p {
+  font-style: italic;
+}
+
+label {
+  display: inline-block;
+  margin: 0.25rem 0;
+}
+
+input {
+  display: inline-block;
+  height: 1.5rem;
+  width: 150px;
+  font-size: 0.9rem;
+  caret-color: var(--accent);
+  border: none;
+  border-radius: 3px;
+  padding-left: 0.25rem;
+  margin: 0.25rem 0rem 0.25rem 0.5rem;
+}
+
+input:focus {
+  outline: transparent;
+}
+
+.btn {
+  background: var(--secondary);
+  font-size: 0.9rem;
+  height: 30px;
+  width: 100px;
+  border: none;
+  border-radius: 3px;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--accent);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--secondary);
+}
+
+li {
+  font-style: italic;
+  list-style-type: none;
+  margin-bottom: 0.5rem;
+}
+
+span {
+  color: #8addaa;
+  font-size: 1.1rem;
+  font-style: normal;
+}
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+body {
+  background: var(--bg);
+  display: flex;
+  flex-flow: column nowrap;
+  color: var(--text);
+  height: 100%;
+  width: 600px;
+  line-height: 1.5rem;
+  margin: 0 auto;
+  padding: 5rem 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow-y: scroll;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+.hero {
+  background: var(--primary);
+  width: calc(100% - 1rem);
+  border: 3px solid var(--secondary);
+  border-radius: 10px;
+  padding: 0 0.5rem;
+  margin-bottom: 0.75rem;
+  text-align: center;
+  /* box-shadow: 3px 3px 3px 3px var(--primary); */
+}
+
+.hero p {
+  padding-bottom: 1rem;
+}
+section {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.sectionWrap {
+  background: var(--primary);
+  width: calc(100% - 1rem);
+  border: 3px solid var(--secondary);
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin: 0 auto;
+  margin-bottom: 0.75rem;
+  /* box-shadow: 3px 3px 3px 3px var(--primary); */
+}
+
+.paid {
+  margin-bottom: 0.5rem;
+}
+
+.userInput {
+  display: flex;
+  flex-flow: row nowrap;
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/

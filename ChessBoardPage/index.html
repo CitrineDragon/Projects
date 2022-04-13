@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="This is where your description goes" />
+    <meta name="keywords" content="one, two, three" />
+
+    <title>Playing 5D Chess</title>
+
+    <!-- external CSS link -->
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <form id="myForm" action="#">
+      <label for="height">Please enter a column height:</label>
+      <input
+        class="boardHeight"
+        type="text"
+        name="height"
+        placeholder="Enter a number..."
+      />
+      <label for="width">Please enter a row width:</label>
+      <input
+        class="boardWidth"
+        type="text"
+        name="width"
+        placeholder="Enter a number..."
+      />
+    </form>
+    <button class="btn build" type="button">Build My Board</button>
+    <button class="btn reset" type="button">Reset</button>
+    <section class="boardContainer"></section>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
