@@ -235,7 +235,7 @@ input:focus {
   border-radius: 5px;
   padding: 0.5rem;
   margin-top: 0.5rem;
-  text-align: center;
+  text-align: left;
 }
 
 .instructionInfo {

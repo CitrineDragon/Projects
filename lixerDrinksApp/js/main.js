@@ -21,6 +21,7 @@ function GetDrinks() {
       .catch((err) => {
         console.log(`error ${err}`);
       });
+    setInterval(() => this.getNext(), 5000);
   };
 
   // Fetches and stores the obj for a name search
@@ -85,7 +86,7 @@ function GetDrinks() {
     document.querySelector('.drinkTitle').innerText =
       obj.drinks[count].strDrink;
     document.querySelector('.drinkIMG').src = obj.drinks[count].strDrinkThumb;
-    document.querySelector('.ingredientInfoList').innerText = result.join(', ');
+    document.querySelector('.ingredientInfoList').innerText = result.join('\n');
     document.querySelector('.instructionInfoList').innerText =
       obj.drinks[count].strInstructions;
     document.querySelector('.resultText').innerText = lastResult + 1;
