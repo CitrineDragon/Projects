@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="Astro Cactus | Your Daily Horoscope" />
+    <meta name="keywords" content="one, two, three" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Astro Cactus | Your Daily Horoscope</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <section class="hero">Astro Cactus</section>
+    <section class="mainContainer">
+      <section class="choiceContainer">
+        <label for="sign">Choose Your Sign</label>
+        <select name="sign" id="signs" class="signs">
+          <option value="aries">Aries</option>
+          <option value="taurus">Taurus</option>
+          <option value="gemini">Gemini</option>
+          <option value="cancer">Cancer</option>
+          <option value="leo">Leo</option>
+          <option value="virgo">Virgo</option>
+          <option value="libra">Libra</option>
+          <option value="scorpio">Scorpio</option>
+          <option value="sagittarius">Sagittarius</option>
+          <option value="capricorn">Capricorn</option>
+          <option value="aquarius">Aquarius</option>
+          <option value="pisces">Pisces</option>
+        </select>
+      </section>
+      <button class="getFetch">Submit</button>
+      <section class="infoContainer">
+        <p>Date: <span class="getDate">Date Here</span></p>
+        <p>Lucky Number: <span class="getNumber">##</span></p>
+      </section>
+      <p class="horoscope">
+        Horoscope:
+        <span class="getInfo"
+          >Select your sign and click submit to get your daily horoscope.</span
+        >
+      </p>
+    </section>
+
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>
