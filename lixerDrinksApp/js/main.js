@@ -12,6 +12,7 @@ function GetDrinks() {
       .then((res) => res.json())
 
       .then((data) => {
+        console.log(data);
         obj = JSON.parse(JSON.stringify(data));
         lastResult = data.drinks.length - 1;
         // console.log(obj);
