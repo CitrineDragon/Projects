@@ -31,6 +31,7 @@ class Gameboard {
       // Check if the position has already been played
       this.board[row][column] = player;
       this.moves++;
+      results.innerHTML = '';
       return true;
     } else {
       results.innerHTML = 'This position has already been played';
@@ -121,7 +122,6 @@ let gameboard = new Gameboard();
 
 function clickSquare(event) {
   let successfulMove;
-  results.innerHTML = '';
   switch (event.target.classList[1]) {
     case 'one':
       successfulMove = gameboard.makeMove(player, 0, 0);
