@@ -2,6 +2,15 @@ const PLAYER1 = 'X';
 const PLAYER2 = 'O';
 const EMPTY = '';
 
+let player = PLAYER1;
+let reset = document.querySelector('.reset');
+let results = document.querySelector('.results');
+let squares = document.querySelectorAll('.square');
+reset.addEventListener('click', resetBoard);
+squares.forEach((square) => {
+  square.addEventListener('click', clickSquare);
+});
+
 class Gameboard {
   constructor() {
     this.board = Array(3); // board of 3 x 3
@@ -12,20 +21,19 @@ class Gameboard {
     this.gameOver = false;
   }
 
-  /**
-   * Make a move at position (row, column)
-   */
+  /**  Make a move at position (row, column) **/
   makeMove(player, row, column) {
+    // console.log(player);
     if (this.gameOver) return;
-    console.log(`${row}, ${column} = `, this.board);
-    console.log(this.board[row][column]);
-    if (this.board[row][column] == EMPTY) {
+    // console.log(`${row}, ${column} = `, this.board);
+    // console.log(this.board[row][column]);
+    if (this.board[row][column] === EMPTY) {
       // Check if the position has already been played
       this.board[row][column] = player;
       this.moves++;
       return true;
     } else {
-      alert('This position has already been played');
+      results.innerHTML = 'This position has already been played';
       return false;
     }
   }
@@ -35,25 +43,25 @@ class Gameboard {
     if (
       this.board[0][0] === this.board[0][1] &&
       this.board[0][1] === this.board[0][2] &&
-      this.board[0][0] != EMPTY
+      this.board[0][0] !== EMPTY
     ) {
-      alert('You win');
+      declareWinner();
       this.gameOver = true;
     }
     if (
       this.board[1][0] === this.board[1][1] &&
       this.board[1][1] === this.board[1][2] &&
-      this.board[1][0] != EMPTY
+      this.board[1][0] !== EMPTY
     ) {
-      alert('You win');
+      declareWinner();
       this.gameOver = true;
     }
     if (
       this.board[2][0] === this.board[2][1] &&
       this.board[2][1] === this.board[2][2] &&
-      this.board[2][0] != EMPTY
+      this.board[2][0] !== EMPTY
     ) {
-      alert('You win');
+      declareWinner();
       this.gameOver = true;
     }
 
@@ -61,25 +69,25 @@ class Gameboard {
     if (
       this.board[0][0] === this.board[1][0] &&
       this.board[1][0] === this.board[2][0] &&
-      this.board[0][0] != EMPTY
+      this.board[0][0] !== EMPTY
     ) {
-      alert('You win');
+      declareWinner();
       this.gameOver = true;
     }
     if (
       this.board[0][1] === this.board[1][1] &&
       this.board[1][1] === this.board[2][1] &&
-      this.board[0][1] != EMPTY
+      this.board[0][1] !== EMPTY
     ) {
-      alert('You win');
+      declareWinner();
       this.gameOver = true;
     }
     if (
       this.board[0][2] === this.board[1][2] &&
       this.board[1][2] === this.board[2][2] &&
-      this.board[0][2] != EMPTY
+      this.board[0][2] !== EMPTY
     ) {
-      alert('You win');
+      declareWinner();
       this.gameOver = true;
     }
 
@@ -87,45 +95,33 @@ class Gameboard {
     if (
       this.board[0][0] === this.board[1][1] &&
       this.board[1][1] === this.board[2][2] &&
-      this.board[0][0] != EMPTY
+      this.board[0][0] !== EMPTY
     ) {
-      alert('You win');
+      declareWinner();
       this.gameOver = true;
     }
     if (
       this.board[0][2] === this.board[1][1] &&
       this.board[1][1] === this.board[2][0] &&
-      this.board[0][2] != EMPTY
+      this.board[0][2] !== EMPTY
     ) {
-      alert('You win');
+      declareWinner();
       this.gameOver = true;
     }
 
     // Check to see if 9 moves have been made
     if (this.moves >= 9 && !this.gameOver) {
-      alert('Tie game');
+      results.innerHTML = 'The game was a draw';
       this.gameOver = true;
     }
   }
 }
 
-let squares = document.querySelectorAll('.square');
-squares.forEach((square) => {
-  square.addEventListener('click', clickSquare);
-});
 let gameboard = new Gameboard();
-let player = PLAYER1;
-
-function getNextPlayer() {
-  if (player == PLAYER1) {
-    return PLAYER2;
-  } else {
-    return PLAYER1;
-  }
-}
 
 function clickSquare(event) {
   let successfulMove;
+  results.innerHTML = '';
   switch (event.target.classList[1]) {
     case 'one':
       successfulMove = gameboard.makeMove(player, 0, 0);
@@ -163,4 +159,22 @@ function clickSquare(event) {
     gameboard.checkWin();
     player = getNextPlayer();
   }
+}
+
+function getNextPlayer() {
+  if (player === PLAYER1) {
+    return PLAYER2;
+  } else {
+    return PLAYER1;
+  }
+}
+
+function declareWinner() {
+  return player === 'X'
+    ? (results.innerHTML = 'Player 1 wins')
+    : (results.innerHTML = 'Player 2 wins');
+}
+
+function resetBoard() {
+  location.reload();
 }
