@@ -3,9 +3,12 @@ const PLAYER2 = 'O';
 const EMPTY = '';
 
 let player = PLAYER1;
-let reset = document.querySelector('.reset');
-let results = document.querySelector('.results');
-let squares = document.querySelectorAll('.square');
+const reset = document.querySelector('.reset');
+const results = document.querySelector('.results');
+const squares = document.querySelectorAll('.square');
+const pressed = document.querySelectorAll(
+  '.one, .two, .three, .four, .five, .six, .seven, .eight, .nine'
+);
 reset.addEventListener('click', resetBoard);
 squares.forEach((square) => {
   square.addEventListener('click', clickSquare);
@@ -177,4 +180,10 @@ function declareWinner() {
 
 function resetBoard() {
   location.reload();
+}
+
+for (const press of pressed) {
+  press.addEventListener('click', function handleClick() {
+    press.classList.add('pressed');
+  });
 }

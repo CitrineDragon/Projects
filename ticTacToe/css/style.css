@@ -71,22 +71,27 @@ body {
   font-size: 4rem;
   font-weight: 700;
   line-height: 100px;
-  border: 2px solid black;
   border-radius: 5px;
   text-align: center;
   box-shadow: 5px 5px 8px 3px rgba(0, 0, 0, 0.7);
 }
 
+.pressed {
+  background-color: transparent;
+  color: white;
+  border: none;
+  box-shadow: none;
+  text-shadow: 3px 3px 5px black;
+}
+
 .square:hover {
-  background-color: #ccc;
-  border: 2px solid red;
   transform: scale(1.08);
 }
 
 button {
   font-size: 1.6rem;
   line-height: 1.6rem;
-  border: 2px solid red;
+  border: none;
   border-radius: 5px;
   padding: 0.5rem 1rem;
   box-shadow: 5px 5px 8px 3px rgba(0, 0, 0, 0.7);
@@ -95,7 +100,6 @@ button {
 button:hover {
   background-color: red;
   color: white;
-  border: 2px solid red;
   transform: scale(1.1);
 }
 
